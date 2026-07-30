@@ -1,0 +1,7 @@
+{
+  "category.easyredstone": "Easy Redstone",
+  "key.easyredstone.toggle": "Toggle Easy Redstone Placement",
+  "message.easyredstone.status": "Easy Placement: %s",
+  "message.easyredstone.on": "ON",
+  "message.easyredstone.off": "OFF"
+}
