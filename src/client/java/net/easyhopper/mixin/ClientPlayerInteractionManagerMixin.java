@@ -27,7 +27,7 @@ public class ClientPlayerInteractionManagerMixin {
         return easyhopper_fakeSneaking;
     }
 
-    @Inject(method = "interactBlock", at = @At("HEAD"))
+    @Inject(method = {"interactBlock", "method_2896"}, at = @At("HEAD"))
     private void onInteractBlockHead(ClientPlayerEntity player, Hand hand, BlockHitResult hitResult,
                                      CallbackInfoReturnable<ActionResult> cir) {
         easyhopper_fakeSneaking = false;
@@ -46,7 +46,7 @@ public class ClientPlayerInteractionManagerMixin {
         }
     }
 
-    @Inject(method = "interactBlock", at = @At("RETURN"))
+    @Inject(method = {"interactBlock", "method_2896"}, at = @At("RETURN"))
     private void onInteractBlockReturn(ClientPlayerEntity player, Hand hand, BlockHitResult hitResult,
                                        CallbackInfoReturnable<ActionResult> cir) {
         easyhopper_fakeSneaking = false;
@@ -91,4 +91,4 @@ public class ClientPlayerInteractionManagerMixin {
             || block instanceof DecoratedPotBlock
             || block instanceof CrafterBlock;
     }
-}
+            }
